@@ -6,10 +6,14 @@ export type User = {
 };
 
 export type SimpleUser = Pick<User, 'username' | 'image'>;
-// Pick - 기존 속성에서 일부 속성만 가져옴
 
 export type DetailUser = User & {
   following: SimpleUser[];
   followers: SimpleUser[];
   bookmarks: string[];
+};
+
+export type ProfileUser = User & {
+  following: number;
+  followers: number;
 };
