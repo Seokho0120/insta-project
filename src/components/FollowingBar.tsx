@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { PropagateLoader } from 'react-spinners';
 import useSWR from 'swr';
 import Avatar from './Avatar';
-import ScrollableBar from './ScrollableBar';
+import ScrollableBar from './ui/ScrollableBar';
 
 export default function FollowingBar() {
   const { data, isLoading: loading, error } = useSWR<DetailUser>('/api/me');
