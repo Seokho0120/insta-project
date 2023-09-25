@@ -23,5 +23,3 @@ export default function UserCard({
     </Link>
   );
 }
-
-// Link 사용 - 검색결과가 보여지면, 상단에 있는 내용을 미리 프리패칭 해서 먼저 보여줌
