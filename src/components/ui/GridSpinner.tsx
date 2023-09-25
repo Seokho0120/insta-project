@@ -7,6 +7,8 @@ const GridLoader = dynamic(
   }
 );
 
+// client 에서 쓰는 spinner 을 next 가 ssr로 미리 불러와서 생기는 문제 이렇게 dynamic 으로 사용하면 된다.
+
 type Props = {
   color?: string;
 };
