@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { PropagateLoader } from 'react-spinners';
 import useSWR from 'swr';
 import Avatar from './Avatar';
-import ScrollabelBar from './ScrollabelBar';
+import ScrollableBar from './ScrollableBar';
 
 export default function FollowingBar() {
   const { data, isLoading: loading, error } = useSWR<DetailUser>('/api/me');
@@ -25,7 +25,7 @@ export default function FollowingBar() {
       )}
 
       {users && users.length > 0 && (
-        <ScrollabelBar>
+        <ScrollableBar>
           {users.map(({ image, username }) => (
             <Link
               key={username}
@@ -38,7 +38,7 @@ export default function FollowingBar() {
               </p>
             </Link>
           ))}
-        </ScrollabelBar>
+        </ScrollableBar>
       )}
     </section>
   );

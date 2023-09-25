@@ -12,7 +12,7 @@ const responsive = {
   },
 };
 
-export default function ScrollabelBar({
+export default function ScrollableBar({
   children,
 }: {
   children: React.ReactNode;
