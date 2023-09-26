@@ -3,9 +3,6 @@ import { dislikePost, likePost } from '@/service/posts';
 import { getServerSession } from 'next-auth';
 import { NextRequest, NextResponse } from 'next/server';
 
-// RestAPI HTTP 메서드
-// GET(데이터 읽어오기), POST(데이터 새로만들기), PUT(데이터 업데이트), DELETE(데이터 삭제하기)
-
 export async function PUT(req: NextRequest) {
   const session = await getServerSession(authOptions);
   const user = session?.user;
