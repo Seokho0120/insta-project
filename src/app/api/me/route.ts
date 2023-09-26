@@ -11,7 +11,6 @@ export async function GET() {
     return new Response('Authentication Error', { status: 401 });
   }
 
-  return getUserByUsername(user.username).then((data) =>
-    NextResponse.json(data)
-  );
+  return getUserByUsername(user.username) //
+    .then((data) => NextResponse.json(data));
 }

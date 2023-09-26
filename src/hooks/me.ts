@@ -14,8 +14,7 @@ export default function useMe() {
 
   const setBookmark = (postId: string, bookmark: boolean) => {
     if (!user) return;
-
-    const bookmarks = user?.bookmarks;
+    const bookmarks = user.bookmarks;
     const newUser = {
       ...user,
       bookmarks: bookmark
@@ -30,6 +29,5 @@ export default function useMe() {
       rollbackOnError: true,
     });
   };
-
   return { user, isLoading, error, setBookmark };
 }
