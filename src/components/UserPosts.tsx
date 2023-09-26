@@ -18,20 +18,21 @@ const tabs = [
 ];
 
 export default function UserPosts({ user: { username } }: Props) {
-  // tab 3개
-  // 1. /api/users/${username}/posts - 사용자의 포스트
-  // 2. /api/users/${username}/liked - 사용자가 좋아한 포스트
-  // 3. /api/users/${username}/bookmarks - 사용자 북마크
-
   const [query, setQuery] = useState(tabs[0].type);
 
   return (
     <section>
-      <ul>
+      <ul className='flex justify-center uppercase'>
         {tabs.map(({ type, icon }) => (
-          <li key={type} onClick={() => setQuery(type)}>
-            <button>{icon}</button>
-            <span>{type}</span>
+          <li
+            className={`mx-12 p-4 cursor-pointer border-black ${
+              type === query && 'font-bold border-t'
+            }`}
+            key={type}
+            onClick={() => setQuery(type)}
+          >
+            <button className='scale-150 md:scale-100'>{icon}</button>
+            <span className='hidden md:inline'>{type}</span>
           </li>
         ))}
       </ul>
