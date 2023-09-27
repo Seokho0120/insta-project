@@ -119,8 +119,6 @@ export async function addComment(
 }
 
 export async function createPost(userId: string, text: string, file: Blob) {
-  console.log(userId, text, file);
-
   return fetch(assetsURL, {
     method: 'POST',
     headers: {

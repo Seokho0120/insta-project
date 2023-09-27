@@ -2,7 +2,7 @@ import { getLikedPostsOf, getPostOf, getSavedPostsOf } from '@/service/posts';
 import { NextRequest, NextResponse } from 'next/server';
 
 type Context = {
-  params: { slug: string[] }; // slug/slug/slug.. 처럼 뒤에 계속 붙어야되므로
+  params: { slug: string[] };
 };
 
 export async function GET(_: NextRequest, context: Context) {
