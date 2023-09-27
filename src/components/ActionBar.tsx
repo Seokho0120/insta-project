@@ -1,6 +1,6 @@
 import { parseDate } from '@/util/date';
 import { SimplePost } from '@/model/post';
-import usePosts from '@/hooks/post';
+import usePosts from '@/hooks/posts';
 import useMe from '@/hooks/me';
 import HeartIcon from './ui/icons/HeartIcon';
 import BookMarkIcon from './ui/icons/BookmarkIcon';

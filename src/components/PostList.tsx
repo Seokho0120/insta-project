@@ -1,5 +1,5 @@
 'use client';
-import usePosts from '@/hooks/post';
+import usePosts from '@/hooks/posts';
 import PostListCard from './PostListCard';
 import GridSpinner from './ui/GridSpinner';
 
@@ -11,7 +11,6 @@ export default function PostList() {
       {loading && (
         <div className='text-center mt-32'>
           <GridSpinner color='red' />
-          {/* <GridLoader color='red' /> */}
         </div>
       )}
 
