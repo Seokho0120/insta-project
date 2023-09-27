@@ -1,15 +1,12 @@
+import { parseDate } from '@/util/date';
+import { SimplePost } from '@/model/post';
+import usePosts from '@/hooks/post';
+import useMe from '@/hooks/me';
 import HeartIcon from './ui/icons/HeartIcon';
 import BookMarkIcon from './ui/icons/BookmarkIcon';
-import { parseDate } from '@/util/date';
-import { useState } from 'react';
 import ToggleButton from './ui/ToggleButton';
 import HeartFillIcon from './ui/icons/HeartFillIcon';
 import BookmarkFillIcon from './ui/icons/BookmarkFillIcon';
-import { SimplePost } from '@/model/post';
-import { useSession } from 'next-auth/react';
-import { useSWRConfig } from 'swr';
-import usePosts from '@/hooks/post';
-import useMe from '@/hooks/me';
 
 type Props = {
   post: SimplePost;
