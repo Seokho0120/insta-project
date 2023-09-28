@@ -21,8 +21,6 @@ export async function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
-// 기존 nextauth의 middleware는 아직 api는 검사 못함. 그래서 token으로
-
 export const config = {
   matcher: [
     '/new',
